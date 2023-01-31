@@ -8,9 +8,9 @@ const getQuestion = async () => {
         .then(data=>data)
 array.push(arrayListQuestion)
 }
-getQuestion().then(()=>array[0].map(item=>{
+getQuestion().then(()=>array[0].map((item,index)=>{
     let div = document.createElement('a');
-    div.href = `./detailsQuestion.html?data=${JSON.stringify([item.question, item.answer])}`
+    div.href = `./detailsQuestion.html?data=${JSON.stringify(index)}`
     div.classList.add('textQuestion')
     div.textContent=`${item.question}`
 

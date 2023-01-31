@@ -4,26 +4,35 @@ const answer = document.getElementById('answer')
 const titleAnswers = document.getElementById('titleAnswer')
 
 let url =new URL (location.href)
-let details = JSON.parse(url.searchParams.get('data'))
-console.log(details,'detailsdetailsdetails')
+let detailsTitle = JSON.parse(url.searchParams.get('data'))
+let indexObj = detailsTitle
+
    const getDetailsTitle = ()=>{
        let div = document.createElement('div');
       div.classList.add('titleQuestion')
-      div.textContent=`${details[0]}`
+      div.textContent=`${array[0][indexObj].question}`
        titleQuestion.appendChild(div)
    }
+let array = []
+const getQuestion = async () => {
+   let arrayListQuestion=  await fetch('TV_FAQ_eng.json')
+       .then(res=>res.json())
+       .then(data=>data)
+   array.push(arrayListQuestion)
+}
    const getAnswer = () => {
-    const titleAnswer =details[1].split('1')[0]
-       let from = details[1].search('1.');
-       let to = details[1].length;
-       let subAnswer = details[1].substring(from,to);
+   const detailsQuestion = array[0][indexObj]
+       const titleAnswer = detailsQuestion.answer.split('1')[0]
+       let from = detailsQuestion.answer.search('1.');
+       let to = detailsQuestion.answer.length;
+       let subAnswer = detailsQuestion.answer.substring(from,to);
        let numberBlack = document.createElement('p');
        let liTitle = document.createElement('p');
        let subAnswerP = document.createElement('div');
 
        numberBlack.classList.add('numberBlack')
        numberBlack.textContent=` `
-
+       console.log(titleAnswer,'  ')
 
        liTitle.classList.add('listQuestionTitle')
        liTitle.innerText=`${titleAnswer}`
@@ -37,5 +46,8 @@ console.log(details,'detailsdetailsdetails')
       }
 
    }
-getDetailsTitle()
-getAnswer()
+getQuestion().then(()=> {
+    getDetailsTitle()
+    getAnswer()
+})
+
