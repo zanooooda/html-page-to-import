@@ -5,7 +5,7 @@ const titleAnswers = document.getElementById('titleAnswer')
 
 let url =new URL (location.href)
 let detailsTitle = JSON.parse(url.searchParams.get('data'))
-let indexObj = detailsTitle
+let indexObj = detailsTitle-1
 
    const getDetailsTitle = ()=>{
        let div = document.createElement('div');
