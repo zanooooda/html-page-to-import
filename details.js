@@ -1,6 +1,7 @@
 
 const titleQuestion = document.getElementById('titleQuestion')
 const answer = document.getElementById('answer')
+const titleAnswers = document.getElementById('titleAnswer')
 
 let url =new URL (location.href)
 let details = JSON.parse(url.searchParams.get('data'))
@@ -13,18 +14,25 @@ console.log(details,'detailsdetailsdetails')
    }
    const getAnswer = () => {
     const titleAnswer =details[1].split('1')[0]
-       const subAnswer =details[1].split('1.')[1]
+       let from = details[1].search('1.');
+       let to = details[1].length;
+       let subAnswer = details[1].substring(from,to);
+       let numberBlack = document.createElement('p');
+       let liTitle = document.createElement('p');
+       let subAnswerP = document.createElement('div');
 
-       let liTitle = document.createElement('li');
-       let subAnswerP = document.createElement('p');
+       numberBlack.classList.add('numberBlack')
+       numberBlack.textContent=` `
 
 
        liTitle.classList.add('listQuestionTitle')
-       liTitle.textContent=`${titleAnswer}`
-       subAnswerP.textContent=`${subAnswer}`
+       liTitle.innerText=`${titleAnswer}`
+       subAnswerP.classList.add('subAnswerP')
+       subAnswerP.innerText=`${subAnswer}`
+       titleAnswers.appendChild(numberBlack)
+       titleAnswers.appendChild(liTitle)
 
-       answer.appendChild(liTitle)
-      if(subAnswer){
+       if(from !== -1){
          answer.appendChild(subAnswerP)
       }
 

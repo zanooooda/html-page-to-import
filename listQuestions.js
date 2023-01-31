@@ -10,7 +10,7 @@ array.push(arrayListQuestion)
 }
 getQuestion().then(()=>array[0].map(item=>{
     let div = document.createElement('a');
-    div.href = `./detailsQuestion.html?data=${JSON.stringify([item.question,item.answer])}`
+    div.href = `./detailsQuestion.html?data=${JSON.stringify([item.question, item.answer])}`
     div.classList.add('textQuestion')
     div.textContent=`${item.question}`
 

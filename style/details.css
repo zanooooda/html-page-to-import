@@ -34,8 +34,34 @@ body{
     max-width: 945px;
     margin-top: 67px;
 
+
 }
 .listQuestionTitle{
     font-size: 24px;
+    color: #383838;
+    font-weight: 600;
+    width: 90%;
+    margin-top: 0;
+}
+.numberBlack{
+    background: black;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 0;
+}
+.titleAnswer{
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+
+}
+.subAnswerP{
+    padding-left: 30px;
     color: #383838;
 }
