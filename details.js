@@ -22,28 +22,25 @@ const getQuestion = async () => {
 }
    const getAnswer = () => {
    const detailsQuestion = array[0][indexObj]
-       const titleAnswer = detailsQuestion.answer.split('1')[0]
-       let from = detailsQuestion.answer.search('1.');
-       let to = detailsQuestion.answer.length;
-       let subAnswer = detailsQuestion.answer.substring(from,to);
+       const titleAnswer = detailsQuestion.answer.split('.')[0]
+       const indexDot=detailsQuestion.answer.indexOf('.')
+       let subAnswer =detailsQuestion.answer.slice(indexDot+1)
+
        let numberBlack = document.createElement('p');
        let liTitle = document.createElement('p');
        let subAnswerP = document.createElement('div');
 
        numberBlack.classList.add('numberBlack')
        numberBlack.textContent=` `
-       console.log(titleAnswer,'  ')
 
        liTitle.classList.add('listQuestionTitle')
-       liTitle.innerText=`${titleAnswer}`
+       liTitle.innerText=`${titleAnswer}.`
        subAnswerP.classList.add('subAnswerP')
        subAnswerP.innerText=`${subAnswer}`
        titleAnswers.appendChild(numberBlack)
        titleAnswers.appendChild(liTitle)
 
-       if(from !== -1){
-         answer.appendChild(subAnswerP)
-      }
+          answer.appendChild(subAnswerP)
 
    }
 getQuestion().then(()=> {
