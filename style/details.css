@@ -33,7 +33,8 @@ body{
     font-size: 15px;
     max-width: 945px;
     margin-top: 67px;
-
+    margin-bottom: 100px;
+    padding-bottom: 20px;
 
 }
 .listQuestionTitle{
@@ -58,9 +59,12 @@ body{
 .titleAnswer{
     display: flex;
     width: 100%;
+    min-width: 945px;
     padding-top: 20px;
 }
 .subAnswerP{
     padding-left: 30px;
     color: #383838;
+    font-size: 18px;
+    line-height: 26px;
 }
