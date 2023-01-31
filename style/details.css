@@ -3,13 +3,13 @@ body{
     flex-direction: column;
     width: 100%;
     align-items: center;
+    font-family: "Segoe",sans-serif;
 }
 
 .container{
     height: 100vh;
     display: flex;
     justify-content: center;
-
 }
 .content{
     max-width: 945px;
@@ -26,6 +26,7 @@ body{
     color: #383838;
     font-size: 45px;
     max-width: 787px;
+    font-family: "Segoe bold",sans-serif;
 }
 .answer{
     border-bottom: 1px solid #D4D4D4;
@@ -35,7 +36,6 @@ body{
     margin-top: 67px;
     margin-bottom: 100px;
     padding-bottom: 20px;
-
 }
 .listQuestionTitle{
     font-size: 24px;
@@ -43,6 +43,7 @@ body{
     font-weight: 600;
     width: 90%;
     margin-top: 0;
+    font-family: "Segoe semibold",sans-serif;
 }
 .numberBlack{
     background: black;
@@ -67,4 +68,17 @@ body{
     color: #383838;
     font-size: 18px;
     line-height: 26px;
+    font-family: "Segoe",sans-serif;
+}
+@font-face {
+    font-family: "Segoe";
+    src: url("../fonts/SegoeUIVariableStaticDisplay.ttf");
+}
+@font-face {
+    font-family: "Segoe bold";
+    src: url("../fonts/SegoeUIVariableStaticDisplayBold.ttf");
+}
+@font-face {
+    font-family: "Segoe semibold";
+    src: url("../fonts/SegoeUIVariableStaticDisplaySemibold.ttf");
 }

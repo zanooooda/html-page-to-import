@@ -39,7 +39,6 @@ const getQuestion = async () => {
        subAnswerP.innerText=`${subAnswer}`
        titleAnswers.appendChild(numberBlack)
        titleAnswers.appendChild(liTitle)
-
           answer.appendChild(subAnswerP)
 
    }
