@@ -24,7 +24,6 @@ body{
 }
 .titleQuestion{
     color: #383838;
-    font-size: 45px;
     max-width: 787px;
     font-family: "Segoe bold",sans-serif;
 }
@@ -43,7 +42,7 @@ body{
     font-weight: 600;
     width: 90%;
     margin-top: 0;
-    font-family: "Segoe semibold",sans-serif;
+    font-family: "Segoe",sans-serif;
 }
 .numberBlack{
     background: black;

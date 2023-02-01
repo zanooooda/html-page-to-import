@@ -8,7 +8,7 @@ let detailsTitle = JSON.parse(url.searchParams.get('data'))
 let indexObj = detailsTitle-1
 
    const getDetailsTitle = ()=>{
-       let div = document.createElement('div');
+       let div = document.createElement('h1');
       div.classList.add('titleQuestion')
       div.textContent=`${array[0][indexObj].question}`
        titleQuestion.appendChild(div)
