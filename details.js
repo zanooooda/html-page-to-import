@@ -27,8 +27,8 @@ const getQuestion = async () => {
        let subAnswer =detailsQuestion.answer.slice(indexDot+1)
 
        let numberBlack = document.createElement('p');
-       let liTitle = document.createElement('p');
-       let subAnswerP = document.createElement('div');
+       let liTitle = document.createElement('h1');
+       let subAnswerP = document.createElement('li');
 
        numberBlack.classList.add('numberBlack')
        numberBlack.textContent=` `
